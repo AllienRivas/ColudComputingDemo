@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script>
+        
+
+    function Borrar(name) {
+
+        var element = document.getElementById(name);
+        element.remove();
+    }
+
+
+    function Agregar() {
+
+        var texto = window.prompt("","");
+        alert(texto);
+
+    }
+
+</script>
+
+<div class="text-center">
+    <h1 class="display-4">Materia Cloud Computing</h1>
+    <h2>Sesión 2</h2>
+    <h3>Demo de aplicación en OpenShift</h3>
+    <p>Creada por Allien Humberto Rivas Junio del 2022</p>
+
+</div>
+
+<div>
+    <label>Lista de tareas</label>
+    <button onclick="Agregar()">Agregar</button>
+</div>
+<table class="table" id="tbTareas">
+    <thead>
+        <td>
+
+        </td>
+        <td>
+            Tarea
+        </td>
+        <td>
+            Accion
+        </td>
+    </thead>
+    <tr id="rw1">
+        <td>
+            <input type="checkbox" id="chk1"/>
+        </td>
+        <td>Tomates</td>
+        <td><button onclick="Borrar('rw1')">Borrar</button></td>
+    </tr>
+
+</table>
